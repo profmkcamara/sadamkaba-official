@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sadam Kaba — Forex Trader · Entrepreneur · CEO</title>
+  <meta name="description" content="Sadam Kaba — Forex trader, entrepreneur, real estate investor. CEO of Kaba's Gadgets. Contact: kabasadam25@gmail.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#081018; --card:#0e1720; --muted:#94a3b8; --accent1:#ff7a59; --accent2:#7c5cff; --glass:rgba(255,255,255,0.04);
+      --glass-2:rgba(255,255,255,0.02); --white: #e6eef8; --success:#34d399;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial; background: radial-gradient(800px 400px at 10% 10%, rgba(124,92,255,0.08), transparent 20%), radial-gradient(900px 500px at 90% 90%, rgba(255,122,89,0.06), transparent 20%), linear-gradient(180deg,var(--bg),#07101a); color:var(--white);}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,94%);margin:0 auto}
+
+    header{position:sticky;top:0;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:30}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:.8rem}
+    .logo{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--accent1),var(--accent2));box-shadow:0 10px 28px rgba(124,92,255,0.12)}
+    nav ul{display:flex;gap:1rem;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{padding:.45rem .7rem;border-radius:10px;font-weight:600;color:var(--muted)}
+    nav a:hover{background:var(--glass);color:var(--white)}
+    .cta-ghost{padding:.45rem .7rem;border-radius:10px;border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+    /* Hero */
+    .hero{padding:64px 0 44px;display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+    .hero-left h1{font-family:Playfair Display,serif;font-size:clamp(2rem,4vw,3.4rem);margin:.2rem 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:.6rem;padding:.35rem .6rem;border-radius:999px;background:linear-gradient(90deg,rgba(255,122,89,0.08),rgba(124,92,255,0.04));border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+    .lead{color:#d7e6f6;margin-top:1rem;font-size:1.03rem}
+    .badges{display:flex;gap:.6rem;margin-top:1rem}
+    .badge{font-weight:700;background:linear-gradient(90deg,var(--accent2),var(--accent1));padding:.45rem .65rem;border-radius:10px;color:#06121a}
+    .hero-cta{display:flex;gap:.8rem;margin-top:1.2rem}
+    .btn{padding:.75rem 1rem;border-radius:12px;border:none;cursor:pointer;font-weight:700;transition:transform .18s ease,box-shadow .18s ease}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#07101a;box-shadow:0 12px 30px rgba(124,92,255,0.12)}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white)}
+
+    /* card */
+    .profile-card{background:linear-gradient(180deg,var(--card),rgba(255,255,255,0.01));padding:22px;border-radius:18px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 18px 40px rgba(2,6,23,0.6)}
+    .avatar{width:100%;height:260px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,122,89,0.06),rgba(124,92,255,0.06));display:grid;place-items:center}
+    .avatar svg{width:86%;opacity:.95}
+    .profile-meta{display:flex;align-items:center;gap:.8rem;margin-top:14px}
+    .meta-left strong{display:block;font-size:1.05rem}
+    .meta-left span{color:var(--muted);font-size:.9rem}
+
+    /* sections */
+    section{padding:64px 0}
+    .section-title{font-size:1.4rem;margin-bottom:.5rem}
+    .sub{color:var(--muted);margin-bottom:1rem}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .service{background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .service h3{margin:.4rem 0}
+
+    /* socials */
+    .socials{display:flex;gap:.6rem;flex-wrap:wrap}
+    .social{display:inline-flex;align-items:center;gap:.6rem;padding:.55rem .7rem;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 300px;gap:1rem}
+    .contact-form{padding:18px;background:var(--glass-2);border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .field{display:flex;flex-direction:column;margin-bottom:.7rem}
+    .field label{font-size:.9rem;color:var(--muted);margin-bottom:.3rem}
+    .field input,.field textarea{padding:.7rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);outline:none}
+    .contact-card{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .contact-item{display:flex;gap:.7rem;align-items:center;margin-bottom:.6rem}
+    .pill{padding:.35rem .6rem;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700}
+
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+    /* responsive */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+    }
+
+    /* reveal animations */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* reduce motion */
+    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden>SK</div>
+        <div>
+          <div style="font-weight:800">Sadam Kaba</div>
+          <div style="font-size:.85rem;color:var(--muted);margin-top:2px">CEO · Kaba's Gadgets</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="cta-ghost" href="mailto:kabasadam25@gmail.com">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <span class="eyebrow reveal">🇳🇬 🇬🇳  ·  Forex trader · Entrepreneur · Real Estate</span>
+        <h1 class="reveal">Sadam Kaba<span style="display:block;font-size:.85rem;color:var(--muted);font-weight:600;margin-top:8px">CEO, KABA's GADGETS — <span style="color:var(--white)">Aries ♈️ · March 29</span></span></h1>
+        <p class="lead reveal">I trade charts, build businesses, and invest in real assets. Practical strategies, disciplined execution—follow the process, not the hype.</p>
+        <div class="badges reveal">
+          <div class="badge">Forex • Trader</div>
+          <div class="badge">Tech & Gadgets</div>
+          <div class="badge">Real Estate</div>
+        </div>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="mailto:kabasadam25@gmail.com?subject=Opportunity%20to%20connect">Contact Sadam</a>
+          <a class="btn btn-outline" href="https://wa.me/2347034737744" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <aside class="profile-card reveal">
+        <div class="avatar">
+          <!-- stylized portrait placeholder -->
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sadam avatar">
+            <defs>
+              <linearGradient id="pG" x1="0" x2="1">
+                <stop offset="0" stop-color="#ff7a59"/>
+                <stop offset="1" stop-color="#7c5cff"/>
+              </linearGradient>
+            </defs>
+            <rect width="200" height="200" rx="18" fill="url(#pG)" opacity=".14"/>
+            <g transform="translate(20,24)">
+              <circle cx="60" cy="44" r="36" fill="#06121a" opacity=".55" />
+              <circle cx="60" cy="44" r="30" fill="#0b1720" />
+              <path d="M12 150c20-34 96-34 132 0" fill="#06121a" opacity=".6" />
+            </g>
+          </svg>
+        </div>
+        <div class="profile-meta">
+          <div class="meta-left">
+            <strong>Sadam Kaba</strong>
+            <span>CEO, KABA's GADGETS</span>
+          </div>
+          <div style="margin-left:auto;text-align:right">
+            <div style="font-weight:800;color:var(--accent2)">Aries ♈️</div>
+            <div style="color:var(--muted);font-size:.9rem">Mar 29</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;color:var(--muted);font-size:.95rem">Forex trader · Entrepreneur · Real Estate Investor</div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title reveal">About</h2>
+      <p class="sub reveal">Sadam blends market intuition with disciplined risk management. He runs Kaba's Gadgets, trades Forex professionally, and invests in assets that compound value over time.</p>
+      <div class="grid-3">
+        <div class="service reveal">
+          <h3>Forex Trading</h3>
+          <p>Technical analysis, risk management, and mentorship. Transparent performance and clear process — no noise.</p>
+        </div>
+        <div class="service reveal">
+          <h3>Kaba's Gadgets</h3>
+          <p>Curated tech & gadgets store. Quality-first products and fast local distribution across Nigeria & Guinea.</p>
+        </div>
+        <div class="service reveal">
+          <h3>Real Estate</h3>
+          <p>Investment in pragmatic real assets — long-term growth, cash flow focus, and strategic acquisitions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title reveal">Services</h2>
+      <p class="sub reveal">Work with Sadam for trading mentorship, product sourcing, or investment partnerships.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <div class="service reveal" style="flex:1;min-width:240px">
+          <h3>Mentorship</h3>
+          <p>One-on-one coaching to help you trade smarter and manage risk like a pro.</p>
+        </div>
+        <div class="service reveal" style="flex:1;min-width:240px">
+          <h3>Gadgets Supply</h3>
+          <p>Wholesale & retail supply of quality mobile accessories and gadgets.</p>
+        </div>
+        <div class="service reveal" style="flex:1;min-width:240px">
+          <h3>Investment Advisory</h3>
+          <p>Guided real estate deals and asset selection for long-term compounding.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title reveal">Contact</h2>
+      <p class="sub reveal">Reach Sadam directly. Quick replies for serious inquiries.</p>
+      <div class="contact-grid">
+        <form class="contact-form reveal" id="sadamForm">
+          <div class="field">
+            <label for="nm">Name</label>
+            <input id="nm" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="em">Email</label>
+            <input id="em" type="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="txt">Message</label>
+            <textarea id="txt" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div style="display:flex;gap:.6rem">
+            <button class="btn btn-primary" type="submit">Send Email</button>
+            <a class="btn btn-outline" href="https://wa.me/2347034737744" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <p class="sub" style="margin-top:10px;color:var(--muted)">or reach via social handles below — Snapchat: <strong>badboysadam</strong></p>
+        </form>
+
+        <aside class="contact-card reveal">
+          <div class="contact-item"><div class="pill">Email</div><div><a href="mailto:kabasadam25@gmail.com">kabasadam25@gmail.com</a></div></div>
+          <div class="contact-item"><div class="pill">Phone</div><div><a href="tel:+2347034737744">+234 703 473 7744</a> · <a href="https://wa.me/2347034737744" target="_blank">Chat</a></div></div>
+          <div class="contact-item"><div class="pill">Instagram</div><div><a href="https://www.instagram.com/badboysadam" target="_blank">@badboysadam</a></div></div>
+          <div class="contact-item"><div class="pill">Snapchat</div><div><span>badboysadam</span></div></div>
+          <div class="contact-item"><div class="pill">Facebook</div><div><a href="https://web.facebook.com/sadam.kaba.7" target="_blank">sadam.kaba.7</a></div></div>
+          <div class="contact-item"><div class="pill">LinkedIn</div><div><a href="https://ng.linkedin.com/in/kaba-sadam-ba47a7349" target="_blank">Profile</a></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div style="color:var(--muted)">© <span id="yr"></span> Sadam Kaba · Kaba's Gadgets</div>
+        <div style="color:var(--muted)">Built with ❤️ · Crafted for clarity</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // smooth anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href')); if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
+
+    // reveal on scroll
+    const io=new IntersectionObserver((entries)=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('show');io.unobserve(en.target)}})},{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Form mailto
+    document.getElementById('sadamForm').addEventListener('submit',e=>{
+      e.preventDefault();const n=document.getElementById('nm').value.trim();const em=document.getElementById('em').value.trim();const m=document.getElementById('txt').value.trim();const sub=encodeURIComponent('Inquiry for Sadam Kaba');const body=encodeURIComponent(`Name: ${n}\nEmail: ${em}\n\nMessage:\n${m}`);window.location.href=`mailto:kabasadam25@gmail.com?subject=${sub}&body=${body}`;
+    });
+
+    // footer year
+    document.getElementById('yr').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
